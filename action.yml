@@ -1,0 +1,23 @@
+name: 'Check-Regex'
+
+on:
+  push:
+    branches:
+     - "**"
+  pull_request:
+    branches:
+     - "**"
+
+permission:
+  contents: read
+
+jobs:
+  Check-Regex:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Install NPM packages
+        run: |
+          npm i -g vuln-regex-detector
+          npm i -g safe-regex
+          n
+        - name: Clone 
